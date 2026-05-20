@@ -24,7 +24,14 @@ class UserDAOMongo:
             mongo_port = os.getenv("MONGODB_PORT")
             mongo_db = os.getenv("MONGODB_NAME")
 
-            mongo_uri = f"mongodb://labo01:labo01@mongo:27017/"
+            mongo_user = os.getenv("MONGO_INITDB_ROOT_USERNAME")
+            mongo_pass = os.getenv("MONGO_INITDB_ROOT_PASSWORD")
+
+            mongo_uri = (
+                f"mongodb://{mongo_user}:{mongo_pass}"
+                f"@{mongo_host}:{mongo_port}/"
+                f"?authSource=admin"
+            )
 
             self.client = MongoClient(mongo_uri)
 
