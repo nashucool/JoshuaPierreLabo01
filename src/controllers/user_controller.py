@@ -4,8 +4,8 @@ SPDX - License - Identifier: LGPL - 3.0 - or -later
 Auteurs : Gabriel C. Ullmann, Fabio Petrillo, 2025
 """
 
-from daos.user_dao import UserDAO
-from daos.user_dao_mongo.py import UserDAOMongo
+#from daos.user_dao import UserDAO
+from daos.user_dao_mongo import UserDAOMongo
 
 class UserController:
     def __init__(self):
