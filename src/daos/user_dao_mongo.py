@@ -21,8 +21,8 @@ class UserDAOMongo:
 
             load_dotenv(dotenv_path=env_path)
 
-            mongo_host = os.getenv("MONGO_HOST")
-            mongo_port = os.getenv("MONGO_PORT")
+            mongo_host = os.getenv("MONGODB_HOST")
+            mongo_port = os.getenv("MONGODB_PORT")
             mongo_db = os.getenv("MONGO_DB_NAME")
 
             mongo_uri = f"mongodb://{mongo_host}:{mongo_port}"
