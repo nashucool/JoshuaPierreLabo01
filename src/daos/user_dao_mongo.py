@@ -13,7 +13,6 @@ from models.user import User
 
 
 class UserDAOMongo:
-
     def __init__(self):
         try:
             env_path = ".env"
@@ -25,7 +24,7 @@ class UserDAOMongo:
             mongo_port = os.getenv("MONGODB_PORT")
             mongo_db = os.getenv("MONGODB_NAME")
 
-            mongo_uri = f"mongodb://{mongo_host}:{mongo_port}"
+            mongo_uri = f"mongodb://labo01:labo01@mongo:27017/"
 
             self.client = MongoClient(mongo_uri)
 
