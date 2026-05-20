@@ -23,7 +23,7 @@ class UserDAOMongo:
 
             mongo_host = os.getenv("MONGODB_HOST")
             mongo_port = os.getenv("MONGODB_PORT")
-            mongo_db = os.getenv("MONGO_DB_NAME")
+            mongo_db = os.getenv("MONGODB_NAME")
 
             mongo_uri = f"mongodb://{mongo_host}:{mongo_port}"
 
