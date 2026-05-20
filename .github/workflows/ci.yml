@@ -12,11 +12,15 @@ jobs:
 
       - name: Créer fichier .env (TODO - utilisez les secrets)
         run: |
-          echo "MYSQL_HOST=mysql" >> .env
-          echo "MONGODB_HOST=mongo" >> .env
-          echo "MYSQL_DB_NAME=labo01_db" >> .env
-          echo "DB_USERNAME=labo01" >> .env
-          echo "DB_PASSWORD=labo01" >> .env
+              echo "MYSQL_HOST=mysql" >> .env
+              echo "MONGODB_HOST=mongo" >> .env
+              echo "MONGODB_PORT=27017" >> .env
+              echo "MYSQL_DB_NAME=labo01_db" >> .env
+              echo "MONGODB_NAME=labo01_db" >> .env
+              echo "DB_USERNAME=labo01" >> .env
+              echo "DB_PASSWORD=labo01" >> .env
+              echo "MONGO_INITDB_ROOT_USERNAME=labo01" >> .env
+              echo "MONGO_INITDB_ROOT_PASSWORD=labo01" >> .env
 
       - name: Démarrer le conteneur
         run: |
